@@ -1,40 +1,49 @@
-import React,{useState} from 'react'
-import { Link } from 'react-router-dom'
-import { BiMenuAltRight } from 'react-icons/bi'
-import { AiOutlineClose } from 'react-icons/ai'
+import React, { useState, useEffect } from 'react'
+import Newsletter from '../../components/Newsletter/Newsletter';
+// import { Link } from 'react-router-dom'
+// import { BiMenuAltRight } from 'react-icons/bi'
+// import { AiOutlineClose } from 'react-icons/ai'
 
 function Membership() {
+  const [timeLeft, setTimeLeft] = useState(null);
 
-  const [isOpen, setIsOpen] = useState(false)
-  const handleClick = () => {
-    setIsOpen(!isOpen)
-  }
-  const closeMenu = () => { 
-    setIsOpen(false)
-  }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const currentTime = new Date();
+      const futureDate = new Date(
+        currentTime.getFullYear(),
+        currentTime.getMonth() + 3,
+        currentTime.getDate()
+      );
+      const diff = futureDate.getTime() - currentTime.getTime();
+      setTimeLeft(diff);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const formattedTime = timeLeft
+    ? `${Math.floor(timeLeft / (1000 * 60 * 60 * 24))} days : ${
+        Math.floor(timeLeft / (1000 * 60 * 60)) % 24
+      } hours : ${Math.floor(timeLeft / (1000 * 60)) % 60} minutes :${
+        Math.floor(timeLeft / 1000) % 60
+      } seconds`
+    : null;
 
   return (
-    <nav className='flex h-20 w-full justify-between items-center px-14 fixed z-[1]'>
-      <div className="flex items-center justify-evenly ">
-        <div className="flex items-center justify-center">
-        <Link className='w-40 h-11' to='/'><img src={'logo'} alt="sytycc logo" /></Link>
+    <div className="mt-10 h-[100%] relative">
+      <div className="-mx-10 flex flex-col items-center justify-center  text-slate-900 text-center py-12 h-[60vh] bg-black/70 bg-blend-multiply bg-bgBack bg-cover bg-center ">
+        <h1 className="mb-10 text-3xl font-bold text-gray-100 ">
+          Countdown to Launch
+        </h1>
+        <p className="text-purple-100 mt-4 md:text-6xl uppercase">
+          {formattedTime || "Loading countdown..."}
+        </p>
+        <div className="absolute top-0 left-0 bg-gray-900 opacity-75"></div>
       </div>
-      {/* <div className={isOpen ? 'block w-[100vw] h-[100vh]' : 'hidden'}> */}
-        <ul className={isOpen ? 'text-5xl uppercase p-3 flex w-full h-full absolute top-24 left-0 opacity-100 transition-all duration-700 ease-in-out flex-col gap-0 ':'hidden'}>
-          <li onClick={closeMenu} className='text-white my-5 hover:text-orange-800'><Link to="/"> Home</Link></li>
-          <li onClick={closeMenu} className='text-white my-5 hover:text-orange-800'><Link to="/about"> About</Link></li>
-          <li onClick={closeMenu} className='text-white my-5 hover:text-orange-800'><Link to="/profiles"> Profiles</Link></li>
-          <li onClick={closeMenu} className='text-white my-5 hover:text-orange-800'><Link to="/stories"> Stories</Link></li>
-          <li onClick={closeMenu} className='text-white my-5 hover:text-orange-800'><Link to="/membership"> Membership</Link></li>
-          <li onClick={closeMenu} className='text-white my-5 hover:text-orange-800'><Link to="/contact"> Contact</Link></li>
-        </ul>
-      {/* </div> */}
-      </div>
-      <div onClick={handleClick} className="ml-auto">
-        {isOpen ? <AiOutlineClose className='text-3xl cursor-pointer' /> : <BiMenuAltRight className='text-3xl cursor-pointer ease-in-out duration-1000' />}
-      </div>
-    </nav>
-  )
+      <Newsletter />
+    </div>
+  );
 }
 
 export default Membership
