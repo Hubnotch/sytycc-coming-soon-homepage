@@ -23,9 +23,9 @@ function Home() {
   }, []);
 
   const formattedTime = timeLeft
-    ? `${Math.floor(timeLeft / (1000 * 60 * 60 * 24))} days, ${
+    ? `${Math.floor(timeLeft / (1000 * 60 * 60 * 24))} days : ${
         Math.floor(timeLeft / (1000 * 60 * 60)) % 24
-      } hours, ${Math.floor(timeLeft / (1000 * 60)) % 60} minutes, ${
+      } hours : ${Math.floor(timeLeft / (1000 * 60)) % 60} minutes :${
         Math.floor(timeLeft / 1000) % 60
       } seconds`
     : null;
