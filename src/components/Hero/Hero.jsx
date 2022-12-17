@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import CarouselItem from '../CarouselItem/CarouselItem';
-// import Carousel from '../Carousel/Carousel'
 import CarouselItem from '../CarouselItem/CarouselItem'
 
 function Hero() {
@@ -16,7 +14,6 @@ function Hero() {
         <Link className='mt-14 md:mt-28 block' to='/'><button className='bg-[#06113C] text-white px-9 py-3 rounded-xl flex items-center'>Get Started</button></Link>
     </div>
       <div className="h-full w-full md:h-full md:w-full md:block ">
-        {/* <Carousel/> */}
         <CarouselItem/>
     </div>
     </div>

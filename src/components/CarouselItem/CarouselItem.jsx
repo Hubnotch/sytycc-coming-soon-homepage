@@ -1,21 +1,4 @@
-// import React from 'react';
-
-// const CarouselItem = ({ image, title, description }) => {
-//   return (
-//     <div className="w-full h-full flex items-center justify-center">
-//       <img src={image} alt={title} className="w-64 h-64 rounded-lg" />
-//       <div className="px-4 py-2">
-//         <h3 className="text-lg font-bold">{title}</h3>
-//         <p className="text-gray-700">{description}</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default CarouselItem;
-
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
 
 const CarouselItem = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,7 +9,13 @@ const CarouselItem = () => {
     "https://picsum.photos/id/4/600/400",
     "https://picsum.photos/id/5/600/400"
   ];
+  useEffect(() => {
+    const newIndex = currentIndex - 1
+    setTimeout(() => {
+      setCurrentIndex(newIndex < 0 ? images.length - 1 : newIndex)
+    }, 1500);
 
+},[currentIndex,images.length])
   const previous = () => {
     const newIndex = currentIndex - 1;
     setCurrentIndex(newIndex < 0 ? images.length - 1 : newIndex);

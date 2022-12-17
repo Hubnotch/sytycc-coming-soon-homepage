@@ -7,7 +7,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 function Header() {
   const [isOpen,setIsOpen] = useState(false)
   const handleChange = () => {
-  setIsOpen(!isOpen)
+  setIsOpen(prevState=> !prevState)
   }
   const closeMenu = () => {
   setIsOpen(false)
@@ -26,6 +26,15 @@ function Header() {
         <Link onClick={closeMenu} to='/membership'>Membership</Link>
       <div className="">
         <Link to='/'><button className='text-white bg-[#06113C] px-9 py-3 rounded-xl flex items-center'>Login</button></Link>
+      </div>   
+      </div>
+      <div className={isOpen ? 'h-auto text-[#F5F5F5] bg-[#06113C] absolute top-[100px] left-0 w-screen flex items-center flex-col justify-between':'hidden'}>
+        <Link className='my-3 ' onClick={closeMenu} to='/about'>About Us</Link>
+        <Link className='my-3 ' onClick={closeMenu} to='/profiles'>Profiles</Link>
+        <Link className='my-3 ' onClick={closeMenu} to='/stories'>Stories</Link>
+        <Link className='my-3 ' onClick={closeMenu} to='/membership'>Membership</Link>
+      <div className="my-2">
+        <Link to='/'><button  onClick={closeMenu} className='text-white bg-[navy] border border-sky-400 px-9 py-3 rounded-xl flex items-center'>Login</button></Link>
       </div>   
       </div>
       <div className="md:hidden" onClick={handleChange}>

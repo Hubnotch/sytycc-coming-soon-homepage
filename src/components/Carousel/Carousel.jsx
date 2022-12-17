@@ -14,28 +14,12 @@ const CarouselItem = () => {
 ]
   return (
     <Carousel interval={1500}>
-      {images.map((url, index) => (
+      {images.map((url) => (
         <div className="max-w-full max-h-full" key={url.id}>
           <img className='max-h-full max-w-full' src={url.img} alt={url.img} />
         </div>
       ))}
-                {/* <div>
-                    <img src={first} alt="carousel" />
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div>
-                    <img src={second} alt="carousel" />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <img src={third} alt="carousel" />
-                    <p className="legend">Legend 3</p>
-                </div>
-                <div>
-                    <img src={fourth} alt="carousel" />
-                    <p className="legend">Legend 4</p>
-                </div> */}
-            </Carousel>
+</Carousel>
   );
 };
 
