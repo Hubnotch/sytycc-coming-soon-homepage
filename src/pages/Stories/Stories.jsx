@@ -28,15 +28,14 @@ function Stories() {
     : null;
 
   return (
-    <div className="mt-10 h-[100%] relative">
-      <div className="-mx-10 flex flex-col items-center justify-center  text-slate-900 text-center py-12 h-[60vh] bg-black/70 bg-blend-multiply bg-bgBack bg-cover bg-center ">
-        <h1 className="mb-10 text-3xl font-bold text-gray-100 ">
+ <div className="mt-10 h-[100%] relative">
+      <div className="-mx-10 flex flex-col items-center h-[60] justify-between  text-slate-900 text-center py-12 md:h-[80vh] bg-blue-900/5 bg-blend-multiply bg-bgBack bg-no-repeat bg-center bg-[length:100%_100%]">
+        <h1 className="mb-10 text-6xl font-bold text-blue-800/80 ">
           Countdown to Launch
         </h1>
-        <p className="text-purple-100 mt-4 md:text-6xl uppercase">
+        <h2 className="text-orange-800 mt-4 text-6xl font-bold uppercase md:text-7xl md:font-extrabold">
           {formattedTime || "Loading countdown..."}
-        </p>
-        <div className="absolute top-0 left-0 bg-gray-900 opacity-75"></div>
+        </h2>
       </div>
       <Newsletter />
     </div>

@@ -10,7 +10,7 @@ import { BsTelephone} from 'react-icons/bs'
 
 function Footer() {
   return (
-    <footer className='text-sm w-full flex flex-col px-9 py-5 bg-[#C7D1FB]'>
+    <footer className='text-lg w-full flex flex-col px-9 py-5 bg-[#C7D1FB]'>
       <div className="my-4"><img src={logo} alt="sytycc logo" /></div>
       <div className="grid sm:grid-cols-2">
         <div className="">

@@ -20,10 +20,10 @@ function Header() {
         </Link>
       </div>   
       <div className="hidden md:w-3/4 md:flex md:items-center md:justify-between">
-        <Link to='/about'>About Us</Link>
-        <Link to='/profiles'>Profiles</Link>
-        <Link to='/stories'>Stories</Link>
-        <Link to='/membership'>Membership</Link>
+        <Link onClick={closeMenu} to='/about'>About Us</Link>
+        <Link onClick={closeMenu} to='/profiles'>Profiles</Link>
+        <Link onClick={closeMenu} to='/stories'>Stories</Link>
+        <Link onClick={closeMenu} to='/membership'>Membership</Link>
       <div className="">
         <Link to='/'><button className='text-white bg-[#06113C] px-9 py-3 rounded-xl flex items-center'>Login</button></Link>
       </div>   
