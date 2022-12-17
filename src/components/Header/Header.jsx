@@ -28,7 +28,7 @@ function Header() {
         <Link to='/'><button className='text-white bg-[#06113C] px-9 py-3 rounded-xl flex items-center'>Login</button></Link>
       </div>   
       </div>
-      <div className={isOpen ? 'h-auto text-[#F5F5F5] bg-[#06113C] absolute top-[100px] left-0 w-screen flex items-center flex-col justify-between':'hidden'}>
+      <div className={isOpen ? 'ease-in-out duration-700 h-auto text-[#F5F5F5] bg-[#06113C] absolute top-[100px] left-0 w-screen flex items-center flex-col justify-between':'hidden'}>
         <Link className='my-3 ' onClick={closeMenu} to='/about'>About Us</Link>
         <Link className='my-3 ' onClick={closeMenu} to='/profiles'>Profiles</Link>
         <Link className='my-3 ' onClick={closeMenu} to='/stories'>Stories</Link>
