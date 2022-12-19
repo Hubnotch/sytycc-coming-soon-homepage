@@ -13,9 +13,10 @@ function Footer() {
     <footer className='text-lg w-full flex flex-col px-9 py-5 bg-[#C7D1FB]'>
       <div className="my-4"><img src={logo} alt="sytycc logo" /></div>
       <div className="grid sm:grid-cols-2">
-        <div className="">
+        <div className="w-3/4">
           <p className='px-3 pr-3'>
-          We are a fast-growing ecosystem of technology and business enthusiasts that meets the need of the rapidly changing digital world.
+            We are a fast-growing ecosystem of technology and business enthusiasts
+            that meets the need of the rapidly changing digital world.
         </p>
         </div>
         <div className="grid px-4 sm:grid-cols-2">
