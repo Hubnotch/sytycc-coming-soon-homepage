@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Newsletter from "../../components/Newsletter/Newsletter";
-// import bgImage from '../../assets/bgcomingsoon.jpg'
 
 function Home() {
   const [timeLeft, setTimeLeft] = useState(null);
@@ -20,7 +19,7 @@ function Home() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [timeLeft]);
 
   const formattedTime = timeLeft
     ? `${Math.floor(timeLeft / (1000 * 60 * 60 * 24))} days : ${
