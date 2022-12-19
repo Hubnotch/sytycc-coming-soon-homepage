@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Carousel,{CarouselItem} from '../CarouselItem/CarouselItem'
-import first from '../../assets/01.jpg'
-import second from '../../assets/02.jpg'
-import third from '../../assets/03.jpg'
+// import first from '../../assets/01.jpg'
+// import second from '../../assets/02.jpg'
+// import third from '../../assets/03.jpg'
+import fourth from '../../assets/coming-soon.jpeg'
 function Hero() {
  const images = [
-    { id: 1, img:first },
-    { id: 2, img:second },
-    { id: 3, img:third },
+    // { id: 1, img:first },
+    // { id: 2, img:second },
+    // { id: 3, img:third },
+    { id: 4, img:fourth },
   ]
   return (
     <div className='bg-[#F5F5F5] grid-col-1 grid-rows-1 mb-14 px-9 grid md:grid-cols-2 md:mb-[100px]'>
