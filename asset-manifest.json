@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sytycc-coming-soon-homepage/static/css/main.1b615fd4.css",
-    "main.js": "/sytycc-coming-soon-homepage/static/js/main.b1ac47a0.js",
+    "main.js": "/sytycc-coming-soon-homepage/static/js/main.759cc494.js",
     "static/js/787.045d098a.chunk.js": "/sytycc-coming-soon-homepage/static/js/787.045d098a.chunk.js",
     "static/media/bgcomingsoon.jpg": "/sytycc-coming-soon-homepage/static/media/bgcomingsoon.bd8840f90123aa498591.jpg",
     "static/media/01.jpg": "/sytycc-coming-soon-homepage/static/media/01.d34afe21bc0734e4b294.jpg",
@@ -10,11 +10,11 @@
     "static/media/logo.svg": "/sytycc-coming-soon-homepage/static/media/logo.511c4aed68689136ee59888fc5f6bcaa.svg",
     "index.html": "/sytycc-coming-soon-homepage/index.html",
     "main.1b615fd4.css.map": "/sytycc-coming-soon-homepage/static/css/main.1b615fd4.css.map",
-    "main.b1ac47a0.js.map": "/sytycc-coming-soon-homepage/static/js/main.b1ac47a0.js.map",
+    "main.759cc494.js.map": "/sytycc-coming-soon-homepage/static/js/main.759cc494.js.map",
     "787.045d098a.chunk.js.map": "/sytycc-coming-soon-homepage/static/js/787.045d098a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b615fd4.css",
-    "static/js/main.b1ac47a0.js"
+    "static/js/main.759cc494.js"
   ]
 }
