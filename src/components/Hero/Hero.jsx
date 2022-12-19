@@ -1,9 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import CarouselItem from '../CarouselItem/CarouselItem'
-
+import Carousel,{CarouselItem} from '../CarouselItem/CarouselItem'
+import first from '../../assets/01.jpg'
+import second from '../../assets/02.jpg'
+import third from '../../assets/03.jpg'
 function Hero() {
- 
+ const images = [
+    { id: 1, img:first },
+    { id: 2, img:second },
+    { id: 3, img:third },
+  ]
   return (
     <div className='bg-[#F5F5F5] grid-col-1 grid-rows-1 px-9 grid md:grid-cols-2 md:mb-[100px]'>
       <div className="m-4">
@@ -14,7 +20,13 @@ function Hero() {
         <Link className='mt-14 md:mt-28 block' to='/'><button className='bg-[#06113C] text-white px-9 py-3 rounded-xl flex items-center'>Get Started</button></Link>
     </div>
       <div className="h-full w-full md:h-full md:w-full md:block ">
-        <CarouselItem/>
+        <Carousel>
+          {images.map(item => (
+            <CarouselItem key={item.img}>
+              <img src={item.img} alt={item.first} />
+            </CarouselItem>
+          ))}
+        </Carousel>
     </div>
     </div>
   )
