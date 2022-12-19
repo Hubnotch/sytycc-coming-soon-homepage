@@ -11,7 +11,7 @@ function Hero() {
     { id: 3, img:third },
   ]
   return (
-    <div className='bg-[#F5F5F5] grid-col-1 grid-rows-1 px-9 grid md:grid-cols-2 md:mb-[100px]'>
+    <div className='bg-[#F5F5F5] grid-col-1 grid-rows-1 mb-14 px-9 grid md:grid-cols-2 md:mb-[100px]'>
       <div className="m-4">
            <h1 className="text-5xl leading-1 font-bold text-black md:mt-10 md:text-6xl md:leading-1">So You Think You Can</h1>
           <h1 className='text-5xl mt-5 md:text-6xl font-bold leading-8 md:mt-6 text-orange-500'>&lt;Code/&gt;</h1> 
