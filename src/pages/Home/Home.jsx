@@ -20,7 +20,7 @@ function Home() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [timeLeft]);
 
   const formattedTime = timeLeft
     ? `${Math.floor(timeLeft / (1000 * 60 * 60 * 24))} days : ${
