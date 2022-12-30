@@ -23,7 +23,7 @@ function Newsletter() {
   const secondsLeft = timeLeft ? Math.floor(timeLeft / 1000) % 60 : null;
 
   return (
-    <div className='w-full my-8 bg-bgBack bg-no-repeat bg-center bg-cover md:bg-contain md:bg-right'>
+    <div className='w-full my-8 bg-no-repeat bg-center bg-cover md:bg-contain md:bg-right'>
       <div className="my-6 w-full md:w-[60%]">
          <h1 className='text-3xl my-5 leading-10 font-bold sm:text-5xl md:text-6xl'>LAUNCHING SOON...</h1>
       <div className="my-5 flex items-start font-semibold ">

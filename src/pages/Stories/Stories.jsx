@@ -29,7 +29,7 @@ function Stories() {
 
   return (
  <div className="mt-10 h-[100%] relative">
-      <div className="-mx-10 flex flex-col items-center h-[60] justify-between  text-slate-900 text-center py-12 md:h-[80vh] bg-blue-900/5 bg-blend-multiply bg-bgBack bg-no-repeat bg-center bg-[length:100%_100%]">
+      <div className="-mx-10 flex flex-col items-center h-[60] justify-between  text-slate-900 text-center py-12 md:h-[80vh] bg-blue-900/5 bg-blend-multiply  bg-no-repeat bg-center bg-[length:100%_100%]">
         <h1 className="mb-10 text-6xl font-bold text-blue-800/80 ">
           Countdown to Launch
         </h1>

@@ -8,7 +8,6 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'bgBack': "url('./assets/bgcomingsoon.jpg')",
         'bgCarousel': "url('./assets/coming-soon.jpeg')",
       }
     },
