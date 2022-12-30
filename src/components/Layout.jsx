@@ -6,7 +6,7 @@ import Hero from './Hero/Hero'
 function Layout({children}) {
   return (
       <>
-          <Header />
+          <Header/>
           <Hero/>
           <div className="px-9 ">
               <main className="px-9">

@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import Newsletter from '../../components/Newsletter/Newsletter';
+import Testimonial from '../../components/Testimonial/Testimonial';
+
 function About() {
   const [timeLeft, setTimeLeft] = useState(null);
 
@@ -19,15 +21,16 @@ function About() {
   }, []);
 
   const formattedTime = timeLeft
-    ? `${Math.floor(timeLeft / (1000 * 60 * 60 * 24))} days : ${
+    ? `<div className='bg-red'>${Math.floor(timeLeft / (1000 * 60 * 60 * 24))} days : ${
         Math.floor(timeLeft / (1000 * 60 * 60)) % 24
       } hours : ${Math.floor(timeLeft / (1000 * 60)) % 60} minutes :${
         Math.floor(timeLeft / 1000) % 60
-      } seconds`
+      } seconds </div>`
     : null;
 
   return (
     <div className="mt-10 h-[100%] relative">
+      <Testimonial/>
       <div className="-mx-10 flex flex-col items-center h-[60] justify-between  text-slate-900 text-center py-12 md:h-[80vh] bg-blue-900/5 bg-blend-multiply bg-bgBack bg-no-repeat bg-center bg-[length:100%_100%]">
         <h1 className="mb-10 text-6xl font-bold text-blue-800/80 ">
           Countdown to Launch
